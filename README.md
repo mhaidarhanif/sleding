@@ -1,2 +1,3 @@
-# sleding
-Interact with audience by QA, votes, polls, etc
+# Sleding
+
+Social interaction to do QA, votes, polls, etc.
