@@ -1,3 +1,10 @@
+export const renderQuestionElement = (question) => {
+  return `<div class="question">
+<h2>${question.title}</h2>
+<p>${question.description}</p>
+</div>`;
+};
+
 export const renderQuestions = (containerElement, questions) => {
   try {
     if (!questions?.length) {
@@ -6,12 +13,9 @@ export const renderQuestions = (containerElement, questions) => {
 
     const questionsElementsAsString = `<div>${questions
       .map((question) => {
-        return `<div>
-        <h2>${question.title}</h2>
-        <p>${question.description}</p>
-      </div>`;
+        return renderQuestionElement(question);
       })
-      .join()}</div>`;
+      .join("")}</div>`;
 
     containerElement.innerHTML = questionsElementsAsString;
   } catch (error) {
