@@ -10,6 +10,10 @@ textarea {
   font-family: sans-serif;
 }
 
+a {
+  color: var(--color-brand-primary, teal);
+}
+
 /* Components */
 
 .app {
