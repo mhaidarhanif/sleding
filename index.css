@@ -20,6 +20,10 @@ textarea {
   flex: 1;
 }
 
+.form {
+  font-size: 1.2rem;
+}
+
 .flex {
   display: flex;
 }
