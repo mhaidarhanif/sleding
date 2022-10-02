@@ -15,8 +15,18 @@ const members = [
 
 const membersElement = document.getElementById("members");
 
-const membersElementAsString = members
-  .map((member) => `<li>${member.name}</li>`)
-  .join("");
+const renderMembers = () => {
+  const membersElementAsString = members
+    .map((member) => `<li>${member.name}</li>`)
+    .join("");
 
-membersElement.innerHTML = membersElementAsString;
+  membersElement.innerHTML = membersElementAsString;
+};
+
+const addNewMember = () => {
+  // Manipulate the data
+
+  renderMembers();
+};
+
+renderMembers();
