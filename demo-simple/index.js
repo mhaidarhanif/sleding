@@ -1,4 +1,4 @@
-const members = [
+const dataMembers = [
   { name: "Ade" },
   { name: "Agung" },
   { name: "Bayu" },
@@ -15,18 +15,27 @@ const members = [
 
 const membersElement = document.getElementById("members");
 
-const renderMembers = () => {
+const renderMembers = (members) => {
   const membersElementAsString = members
     .map((member) => `<li>${member.name}</li>`)
     .join("");
-
   membersElement.innerHTML = membersElementAsString;
 };
 
-const addNewMember = () => {
-  // Manipulate the data
-
-  renderMembers();
+const searchMemberByName = (members, name) => {
+  const foundMember = members.find((member) => {
+    return member.name === name;
+  });
+  renderMembers([foundMember]);
 };
 
-renderMembers();
+const filterMembersByCharacter = (members, char) => {
+  const foundMembers = members.filter((member) => {
+    return member.name.toLowerCase().includes(char);
+  });
+  renderMembers(foundMembers);
+};
+
+renderMembers(dataMembers);
+filterMembersByCharacter(dataMembers, "i");
+searchMemberByName(dataMembers, "Zul");
