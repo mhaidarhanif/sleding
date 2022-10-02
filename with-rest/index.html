@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REST API</title>
+  </head>
+  <body>
+    <h1>REST API</h1>
+
+    <form id="question-form">
+      <input
+        type="text"
+        name="question-title"
+        id="question-title"
+        placeholder="What do you want to ask?"
+      />
+      <textarea
+        name="question-description"
+        id="question-description"
+        cols="30"
+        rows="10"
+        placeholder="Put some details for the question"
+      ></textarea>
+      <input type="submit" value="Ask Question" />
+    </form>
+
+    <div id="questions">
+      <!-- Questions -->
+    </div>
+
+    <script src="/with-rest/index.js"></script>
+  </body>
+</html>
