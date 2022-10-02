@@ -17,8 +17,10 @@ const addNewQuestion = (event) => {
   const title = formData.get("question-title");
   const description = formData.get("question-description");
 
+  const newQuestion = { title, description };
+
   // Append new question to the existing app questions data
-  const newDataQuestions = [...appQuestions, { title, description }];
+  const newDataQuestions = [...appQuestions, newQuestion];
 
   // Replace existing app questions with the new data
   // Later can be sync with the database or web storage

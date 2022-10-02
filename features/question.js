@@ -8,7 +8,7 @@ export const renderQuestionElement = (question) => {
 export const renderQuestions = (containerElement, questions) => {
   try {
     if (!questions?.length) {
-      throw new Error("Questions data are not available");
+      throw new Error("Sorry, there is no question yet");
     }
 
     const questionsElementsAsString = `<div>${questions
@@ -19,9 +19,6 @@ export const renderQuestions = (containerElement, questions) => {
 
     containerElement.innerHTML = questionsElementsAsString;
   } catch (error) {
-    console.error(error);
-    containerElement.innerHTML = `<p>Error: ${JSON.stringify(
-      error.message
-    )}</p>`;
+    containerElement.innerHTML = `<p>${error.message}</p>`;
   }
 };
