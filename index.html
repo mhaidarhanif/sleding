@@ -16,7 +16,25 @@
 
       <main id="main" class="main">
         <form id="question-form">
-          <input type="text" />
+          <div class="flex-col">
+            <label for="question-title">Title: </label>
+            <input
+              id="question-title"
+              name="question-title"
+              placeholder="Short question title"
+              type="text"
+            />
+          </div>
+          <div class="flex-col">
+            <label for="question-description">Description: </label>
+            <textarea
+              id="question-description"
+              name="question-description"
+              placeholder="Long question description"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
           <input type="submit" value="Add Question" />
         </form>
 

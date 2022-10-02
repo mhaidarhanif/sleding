@@ -18,3 +18,12 @@ body {
 .main {
   flex: 1;
 }
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
