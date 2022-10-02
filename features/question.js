@@ -1,12 +1,23 @@
 export const renderQuestions = (containerElement, questions) => {
-  const questionsElementsAsString = `<div>${questions
-    .map((question) => {
-      return `<div>
-      <h2>${question.title}</h2>
-      <p>${question.description}</p>
-    </div>`;
-    })
-    .join()}</div>`;
+  try {
+    if (!questions?.length) {
+      throw new Error("Questions data are not available");
+    }
 
-  containerElement.innerHTML = questionsElementsAsString;
+    const questionsElementsAsString = `<div>${questions
+      .map((question) => {
+        return `<div>
+        <h2>${question.title}</h2>
+        <p>${question.description}</p>
+      </div>`;
+      })
+      .join()}</div>`;
+
+    containerElement.innerHTML = questionsElementsAsString;
+  } catch (error) {
+    console.error(error);
+    containerElement.innerHTML = `<p>Error: ${JSON.stringify(
+      error.message
+    )}</p>`;
+  }
 };
