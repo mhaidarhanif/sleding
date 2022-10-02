@@ -1,5 +1,12 @@
 export const renderQuestions = (containerElement, questions) => {
-  const questionsElements = `<div>${JSON.stringify(questions)}</div>`;
+  const questionsElementsAsString = `<div>${questions
+    .map((question) => {
+      return `<div>
+      <h2>${question.title}</h2>
+      <p>${question.description}</p>
+    </div>`;
+    })
+    .join()}</div>`;
 
-  containerElement.innerHTML = questionsElements;
+  containerElement.innerHTML = questionsElementsAsString;
 };
