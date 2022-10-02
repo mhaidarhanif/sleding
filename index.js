@@ -7,6 +7,7 @@ const questionFormElement = document.getElementById("question-form");
 const questionsContainerElement = document.getElementById(
   "questions-container"
 );
+const copyrightYearElement = document.getElementById("copyright-year");
 
 const addNewQuestion = (event) => {
   event.preventDefault();
@@ -27,10 +28,12 @@ const addNewQuestion = (event) => {
   renderQuestions(questionsContainerElement, appQuestions);
 };
 
-const main = () => {
+const renderApp = () => {
+  copyrightYearElement.innerText = new Date().getFullYear();
+
   renderQuestions(questionsContainerElement, appQuestions);
+
+  questionFormElement.addEventListener("submit", addNewQuestion);
 };
 
-questionFormElement.addEventListener("submit", addNewQuestion);
-
-main();
+renderApp();

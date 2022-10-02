@@ -1,7 +1,16 @@
+/* Global */
+
+:root {
+  --color-brand-primary: #0aa;
+  --color-brand-secondary: #aca;
+}
+
 body,
 textarea {
   font-family: sans-serif;
 }
+
+/* Components */
 
 .app {
   display: flex;
@@ -20,9 +29,15 @@ textarea {
   flex: 1;
 }
 
+.footer {
+  margin-top: 5rem;
+}
+
 .form {
   font-size: 1.2rem;
 }
+
+/* Utilities */
 
 .flex {
   display: flex;
@@ -31,4 +46,12 @@ textarea {
 .flex-col {
   display: flex;
   flex-direction: column;
+}
+
+.text-brand-primary {
+  color: var(--color-brand-primary, teal);
+}
+
+.text-brand-secondary {
+  color: var(--color-brand-secondary, green);
 }
